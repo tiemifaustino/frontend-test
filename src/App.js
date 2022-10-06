@@ -1,6 +1,6 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import GlobalStyle from './assets/styles/GlobalStyle';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={ <Home /> } />
       </Routes>
+      <GlobalStyle />
     </>
   );
 }
