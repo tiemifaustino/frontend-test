@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HomeContainer = styled.div`
   width: 100vw;
-
+  
   .filter__name {
     padding: 15px;
 
