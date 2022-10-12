@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HomeContainer = styled.div`
+const FilmsContainer = styled.div`
   width: 100vw;
   
   .filter__name {
@@ -21,4 +21,4 @@ const HomeContainer = styled.div`
 
 `;
 
-export default HomeContainer;
+export default FilmsContainer;
