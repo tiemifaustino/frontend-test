@@ -8,7 +8,7 @@ export const getFilms = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const getFilm = async (id) => {
   try {
@@ -18,15 +18,15 @@ export const getFilm = async (id) => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const getPeople = async (endpoint) => {
   try {
     const response = await fetch(endpoint);
     const data = await response.json();
-    console.log(data, 'data do fetch');
+    // console.log(data, 'data do fetch');
     return data;
   } catch (error) {
     console.log(error);
   }
-}
+};
