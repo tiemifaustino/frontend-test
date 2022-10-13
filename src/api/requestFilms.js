@@ -24,7 +24,6 @@ export const getPeople = async (endpoint) => {
   try {
     const response = await fetch(endpoint);
     const data = await response.json();
-    // console.log(data, 'data do fetch');
     return data;
   } catch (error) {
     console.log(error);
