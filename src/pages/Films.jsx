@@ -5,10 +5,11 @@ import FilmsContainer from '../assets/styles/Films';
 import AppContext from '../context/AppContext';
 
 function Films() {
-  const [filterName, setFilterName] = useState('');
+  const [filterMovieName, setFilterName] = useState('');
   const {
     allFilms,
     fetchFilms,
+    fetchPeople,
   } = useContext(AppContext);
 
   const handleFilter = ({ target }) => {
@@ -17,6 +18,7 @@ function Films() {
 
   useEffect(() => {
     fetchFilms();
+    fetchPeople();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -27,9 +29,9 @@ function Films() {
       <div className="filter__name">
         <input
           type="text"
-          value={ filterName }
-          onChange={ handleFilter }
           placeholder="Movie's name"
+          value={ filterMovieName }
+          onChange={ handleFilter }
         />
       </div>
 
@@ -37,7 +39,7 @@ function Films() {
         {
           allFilms
             && allFilms
-              .filter((film) => film.title.toLowerCase().includes(filterName))
+              .filter((film) => film.title.toLowerCase().includes(filterMovieName))
               .map(({ id, title, people, image }) => (
                 <CardFilms
                   key={ id }
